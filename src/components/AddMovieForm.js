@@ -22,7 +22,8 @@ const AddMovieForm = (props) => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     props.addMovie(movie);
     push("/movies");
   };
